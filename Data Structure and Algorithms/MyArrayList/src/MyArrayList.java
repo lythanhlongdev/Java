@@ -19,14 +19,26 @@
  */
 public class MyArrayList<T> {
 
+    // KHai báo mảng nhớ
         private T[] arr;
+        // khái báo kích thước
         private int size;
 
+
+        /*
+            Hàm khởi tạo mặc định
+            khởi tạo mảng = 10 phần tử
+            khởi tạo size = 0;
+        */
         public MyArrayList() {
             this.arr = (T[]) new Object[10];
             this.size = 0;
         }
 
+        /*
+            Hàm khơi tạo có đối số,
+            đối
+        */
         public MyArrayList(int element) {
             this.arr = (T[]) new Object[element];
             this.size = 0;
@@ -81,7 +93,7 @@ public class MyArrayList<T> {
                 // thay đổi địa chỉ vùng nhớ
                 arr = temp;
             }
-            // gán dữ liệu vào vị trí size và tăng size lên 1
+            // gán dữ liệu vào vị trí size và tăng sidfcgvnm ,.ze lên 1
             arr[size++] = info;
         }
 
