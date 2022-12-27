@@ -1,24 +1,25 @@
-import java.util.Date;
 
-public class Class {
-    public static  int COUNT = 0;
-    private String  maLop;
-    private  String tenLop;
-    private  int khoaHoc;
-    private  String heDaoTao;
+public class Lop {
+    public static int COUNT = 0;
+    private String maLop;
+    private String tenLop;
+    private int khoaHoc;
+    private String heDaoTao;
     private Date namHoc;
-    private  Department Khoa;
+    private String makhoa;
 
-    public  Class(){
+    public Lop() {
         COUNT++;
     }
-    public Class(String maLop, String tenLop, int khoaHoc, String heDaoTao, Date namHoc, Department khoa) {
+
+    public Lop(String maLop, String tenLop, String heDaoTao, Date namHoc, String khoa) {
         this.maLop = maLop;
         this.tenLop = tenLop;
-        this.khoaHoc = khoaHoc;
+        // khoa hoc tu dong tang theo nam
+        this.khoaHoc = (int)2022 - namHoc.getYear() ;
         this.heDaoTao = heDaoTao;
         this.namHoc = namHoc;
-        Khoa = khoa;
+        makhoa = khoa;
         COUNT++;
     }
 
@@ -62,18 +63,24 @@ public class Class {
         this.namHoc = namHoc;
     }
 
-    public Department getKhoa() {
-        return Khoa;
+    public String getMakhoa() {
+        return makhoa;
     }
 
-    public void setKhoa(Department khoa) {
-        Khoa = khoa;
+    public void setMakhoa(String makhoa) {
+        this.makhoa = makhoa;
     }
 
     @Override
     public String toString() {
-        return "MALOP: "+this.maLop+", TENLOP: "+this.tenLop+
-                ", KHOAHOC: "+this.khoaHoc+", HEDAOTAO: "+this.heDaoTao+
-                ", NAMHOC: "+this.namHoc.toString() +this.Khoa.toString();
+        return "LOP {MALOP: " + this.maLop + ", TENLOP: " + this.tenLop +
+                ", KHOAHOC: " + this.khoaHoc + ", HEDAOTAO: " + this.heDaoTao +
+                ", NAMHOC: " + this.namHoc.toString() +", MAKHOA: "+ this.makhoa + "} ";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.maLop == ((Lop)obj).maLop &&
+                this.makhoa == ((Lop)obj).makhoa;
     }
 }
