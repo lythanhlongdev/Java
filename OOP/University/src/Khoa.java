@@ -1,4 +1,4 @@
-public class Khoa {
+public class Khoa   {
     public static int COUNT = 0;
     private String maKhoa;
     private String tenKhoa;
@@ -9,10 +9,13 @@ public class Khoa {
     }
 
     public Khoa(String maKhoa, String tenKhoa, String SDT) {
-        this.maKhoa = maKhoa;
-        this.tenKhoa = tenKhoa;
-        this.sdt = SDT;
+        this.maKhoa = maKhoa.toLowerCase().trim();
+        this.tenKhoa = tenKhoa.toLowerCase().trim();
+        this.sdt = SDT.trim();
         COUNT++;
+    }
+    public  Khoa (String maKhoa){
+        this.maKhoa = maKhoa.toLowerCase().trim();
     }
 
     public String getMaKhoa() {
@@ -28,15 +31,15 @@ public class Khoa {
     }
 
     public void setMaKhoa(String maKhoa) {
-        this.maKhoa = maKhoa;
+        this.maKhoa = maKhoa.toLowerCase().trim();
     }
 
     public void setTenKhoa(String tenKhoa) {
-        this.tenKhoa = tenKhoa;
+        this.tenKhoa = tenKhoa.toLowerCase().trim();
     }
 
     public void setSdt(String sdt) {
-        this.sdt = sdt;
+        this.sdt = sdt.trim();
     }
 
     @Override
@@ -47,6 +50,6 @@ public class Khoa {
 
     @Override
     public boolean equals(Object obj) {
-        return this.maKhoa == ((Khoa)obj).maKhoa;
+        return this.maKhoa == ((Khoa)obj).maKhoa.trim();
     }
 }

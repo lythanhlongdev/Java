@@ -8,9 +8,14 @@ public class DuyTanUniversity {
     private ArrayList<HocPhan> HOCPHAN;
     private ArrayList<DiemThi> DIEMTHI;
 
+    private Scanner sc;
+
 
     // Khoi tao du lieu
     public DuyTanUniversity() {
+        // NHAP
+        sc = new Scanner(System.in);
+
         // Khoa
         KHOA = new ArrayList<>();
         KHOA.add(new Khoa("international", "Cong Nghe Thong Tin - Viet My", "000-000-000"));
@@ -40,166 +45,59 @@ public class DuyTanUniversity {
         DIEMTHI.add(new DiemThi(HOCPHAN.get(1).getMaHocPhan(), SINHVIEN.get(0).getMaSv(), 1, 8f));
     }
 
-    private void themKhoa() {
+    public void themKhoa() {
+        System.out.println("KHOA");
+        System.out.println("Ma: ");
+        String maKhoa = sc.nextLine();
+        System.out.println("Ten ");
+        String tenKhoa = sc.nextLine();
+        System.out.println("SDT: ");
+        String sdt = sc.nextLine();
 
-    }
-
-    private void xuaKhoa() {
-        for (int i = 0; i < KHOA.size(); i++) {
-            System.out.println(KHOA.get(i).toString());
+        for (var item : KHOA) {
+            if (item.getMaKhoa() == maKhoa) {
+                System.out.println("That Bai: " + maKhoa + " Da Ton Tai ");
+                System.out.println(item.toString());
+                return;
+            }
         }
+        KHOA.add(new Khoa(maKhoa, tenKhoa, sdt));
+        System.out.println("Them Khoa Thanh Cong");
     }
+
+    public void thongTinKhoa(String maKhoa) {
+        for (var item : KHOA) {
+            if (item.getMaKhoa() == maKhoa){
+                item.toString();
+                return;
+            }
+        }
+        System.out.println("Nhap sai ma khoa hoac khoa khong ton tai");
+    }
+
 
     private void themLop() {
     }
 
-    private void xuatLop() {
-        for (int i = 0; i < LOP.size(); i++) {
-            System.out.println(LOP.get(i).toString());
-        }
+    private void thongTinLop(String maLop) {
     }
 
     private void themSinhVien() {
-
     }
 
-    private void xuatSinhVien() {
-        for (int i = 0; i < SINHVIEN.size(); i++) {
-            System.out.println(SINHVIEN.get(i).toString());
-        }
+    private void thongTinSinhVien() {
     }
 
-    private void themHocPhan() {
-
+    private void themHocphi() {
     }
 
-    private void xuatHocPhan() {
-        for (int i = 0; i < HOCPHAN.size(); i++) {
-            System.out.println(HOCPHAN.get(i).toString());
-        }
+    private void xuatHocPhi() {
     }
 
-    private void themDiem() {
-
+    private void nhapDiemThi() {
     }
 
-    private void xuatDiem() {
-        for (int i = 0; i < DIEMTHI.size(); i++) {
-            System.out.println(DIEMTHI.get(i).toString());
-        }
+    private void xuatDiemThi(String maHocPhan, String maSV) {
     }
 
-    public void QuanLy() {
-        int choose = 0;
-        do {
-            System.out.println("1.Khoa");
-            System.out.println("2.Lop");
-            System.out.println("3.Sinh vien");
-            System.out.println("4.Hoc Phan");
-            System.out.println("5.Diem Thi");
-            System.out.println("0. Thoat; !");
-            Scanner input = new Scanner(System.in);
-            choose = input.nextInt();
-            switch (choose) {
-                case 1: {
-                    int choose1 = 0;
-                    do {
-                        System.out.println("1. Them Khoa");
-                        System.out.println("2. Xuat Khoa");
-                        System.out.println("0. Quay Lai");
-                        choose1 = input.nextInt();
-                        switch (choose1) {
-                            case 1: {
-                                break;
-                            }
-                            case 2: {
-                                xuaKhoa();
-                                break;
-                            }
-                        }
-                    } while (choose1 != 0);
-                    break;
-                }
-                case 2: {
-                    int choose2 = 0;
-                    do {
-                        System.out.println("1. Them Lop");
-                        System.out.println("2. Xuat Lop");
-                        System.out.println("0. Quay Lai");
-                        choose2 = input.nextInt();
-                        switch (choose2) {
-                            case 1: {
-                                break;
-                            }
-                            case 2: {
-                                xuatLop();
-                                break;
-                            }
-                        }
-                    } while (choose2 != 0);
-                    break;
-                }
-                case 3: {
-                    int choose3 = 0;
-                    do {
-                        System.out.println("1. Them Sinh Vien");
-                        System.out.println("2. Xuat Sinh Vien");
-                        System.out.println("0. Quay Lai");
-                        choose3 = input.nextInt();
-                        switch (choose3) {
-                            case 1: {
-                                break;
-                            }
-                            case 2: {
-                                xuatSinhVien();
-                                break;
-                            }
-                        }
-                    } while (choose3 != 0);
-                    break;
-                }
-                case 4: {
-                    int choose4 = 0;
-                    do {
-                        System.out.println("1. Them Hoc Phan");
-                        System.out.println("2. Xuat Hoc Phan");
-                        System.out.println("0. Quay Lai");
-                        choose4 = input.nextInt();
-                        switch (choose4) {
-                            case 1: {
-                                break;
-                            }
-                            case 2: {
-                                xuatHocPhan();
-                                break;
-                            }
-                        }
-                    } while (choose4 != 0);
-                    break;
-                }
-                case 5: {
-                    int choose5 = 0;
-                    do {
-                        System.out.println("1. Them Diem thi");
-                        System.out.println("2. Xuat Diem Thi");
-                        System.out.println("0. Quay Lai");
-                        choose5 = input.nextInt();
-                        switch (choose5) {
-                            case 1: {
-                                break;
-                            }
-                            case 2: {
-                                xuatDiem();
-                                break;
-                            }
-                        }
-                    } while (choose5 != 0);
-                    break;
-                }
-                default: {
-                }
-            }
-        } while (choose != 0);
-
-    }
 }

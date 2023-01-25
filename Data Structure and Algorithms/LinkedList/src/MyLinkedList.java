@@ -88,8 +88,11 @@ public class MyLinkedList<T> {
 
     public boolean deleteLast() {
         if (size != 0) {
+            if(size == 1){
+
+            }
             Node run = first;
-            while (run.next != null) {
+            while (run != null) {
                 if (run.next == last) {
                     run.next = null;
                     last = run;

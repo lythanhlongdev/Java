@@ -20,25 +20,25 @@ public class Test {
 
         // Test addLast(),  pass
         ls.addLast(1);
-        ls.addLast(2);
-        ls.addLast(3);
-        ls.addLast(4);
-        ls.addLast(10);
-        ls.addLast(6);
-        ls.addLast(7);
-        ls.addLast(null);
-        ls.addLast(9);
-        ls.addLast(10);
-        ls.addLast(11);
-        ls.addLast(12);
-        ls.addLast(13);
-        ls.addLast(14);
-        ls.addLast(15);
-        ls.addLast(null);
-        ls.addLast(17);
-        ls.addLast(18);
-        ls.addLast(19);
-        ls.addLast(20);
+//        ls.addLast(2);
+//        ls.addLast(3);
+//        ls.addLast(4);
+//        ls.addLast(10);
+//        ls.addLast(6);
+//        ls.addLast(7);
+//        ls.addLast(null);
+//        ls.addLast(9);
+//        ls.addLast(10);
+//        ls.addLast(11);
+//        ls.addLast(12);
+//        ls.addLast(13);
+//        ls.addLast(14);
+//        ls.addLast(15);
+//        ls.addLast(null);
+//        ls.addLast(17);
+//        ls.addLast(18);
+//        ls.addLast(19);
+//        ls.addLast(20);
         System.out.println(ls.toString());
         System.out.println("Size: "+ls.getSize());
 
@@ -48,9 +48,9 @@ public class Test {
 //        System.out.println("Size: "+ls.getSize());
 
         // Test deleteLast , pass
-//        System.out.println(ls.deleteLast());
-//        System.out.println(ls.toString());
-//        System.out.println("Size: "+ls.getSize());
+        System.out.println(ls.deleteLast());
+        System.out.println(ls.toString());
+        System.out.println("Size: "+ls.getSize());
 
         // Test max size, time => Max = 9999999
 //        long n = 9999999l;
@@ -80,6 +80,8 @@ public class Test {
 //        ls.addLast(100);
 //        System.out.println(ls.toString());
 //        System.out.println("Size: "+ls.getSize());
+
+
 
     }
 }

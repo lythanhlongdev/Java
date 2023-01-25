@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,8 +15,19 @@ public class Main {
 //        System.out.println(lythanhlong.toString());
 //        System.out.println(hk1.toString());
 //        System.out.println(x.toString());
-
+        Scanner sc = new Scanner(System.in);
+        String mk;
+        int i = 0;
         DuyTanUniversity duyTanUniversity = new DuyTanUniversity();
-        duyTanUniversity.QuanLy();
+        while (true){
+            i++;
+            duyTanUniversity.themKhoa();
+            System.out.println("Nhap ma");
+            mk = sc.nextLine();
+            duyTanUniversity.thongTinKhoa(mk);
+
+            if (i == 10)return;
+        }
+
     }
 }

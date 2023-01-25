@@ -1,9 +1,10 @@
 
 // TODO: 20/12/2022
 /*
+    Cách cài đặt stack bằng mảng.
+
     Ngăn sếp(Stack) vào sau ra trước (LIFO) phần tử cuối cùng
     được chèn vào ngăn xếp sẽ là phần tử đầu tiên được lấy ra khỏi ngăn xếp.
-
 
     empty() kiêm tra stack có rỗng hay ko
     push() Đẩy dữ liệu vào ngăn sếp
