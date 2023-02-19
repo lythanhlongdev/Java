@@ -1,4 +1,8 @@
-public class AlgorithmsForArray {
+import java.io.*;
+import java.util.Random;
+import java.util.Scanner;
+
+public class SortOfArray {
 
     /*
         Độ phức tạp O(n^2)
@@ -45,12 +49,17 @@ public class AlgorithmsForArray {
         }
     }
 
-    public static void main(String[] args) {
 
-//        int array[] = {10,7,6,5,1};
-        int array[] = {1,2};
-        System.out.println(array.length);
-        array = bubleSort(array);
-        printArray(array);
+    static void usingRandomClass() {
+        //Vòng lặp in ra 5 số ngẫu nhiên
+        for (int i=0; i<5; i++) {
+            Random rand = new Random();
+            int ranNum = rand.nextInt(100)+1;
+            System.out.println("Random number is " + ranNum);
+        }
+    }
+    public static void main(String[] args) throws FileNotFoundException {
+
+
     }
 }
