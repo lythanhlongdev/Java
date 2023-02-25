@@ -21,7 +21,6 @@ public class Dequy {
         f[(int) n] = dynamicFibonacci(n - 1) + dynamicFibonacci(n - 2);
         return f[(int) n];
 
-
     }
     /*
     n = (n - 1) * ((n-1) - 1)
