@@ -23,5 +23,5 @@ public abstract class Bank {
         this.bankName = bankName;
     }
 
-    protected abstract boolean withdrawal ();
+    protected abstract boolean withdrawal (Double mony) throws InterruptedException;
 }
