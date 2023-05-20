@@ -5,7 +5,7 @@
     - Next chứa địa chỉ của node tiếp theo liền sau.
     - Prev chứa địa chỉ của node liền trước
 * */
-public class DouLinkedList <T>{
+public class DouLinkedList <T> {
     private  class Node {
         private  T data;
         private  Node prev, next;
@@ -53,6 +53,7 @@ public class DouLinkedList <T>{
         }
 
     }
+
     public void printList(){
         if (size == 0){
             System.out.println("List isEmpty !");
